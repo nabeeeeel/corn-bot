@@ -5,8 +5,7 @@ import me.jakejmattson.discordkt.api.dsl.commands
 import me.nabeeeeel.bot.services.ListService
 
 
-fun CornCommands (listService: ListService) = commands("Corn") {
-
+fun CornCommands(listService: ListService) = commands("Corn") {
 
     command("Says") {
         description = "Corn says things."

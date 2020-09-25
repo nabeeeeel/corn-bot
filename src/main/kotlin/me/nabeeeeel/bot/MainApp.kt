@@ -3,8 +3,6 @@ package me.nabeeeeel.bot
 import com.gitlab.kordlib.common.entity.Snowflake
 import me.jakejmattson.discordkt.api.dsl.bot
 import me.jakejmattson.discordkt.api.extensions.profileLink
-import me.nabeeeeel.bot.extensions.requiredPermissionLevel
-import me.nabeeeeel.bot.services.PermissionsService
 import java.awt.Color
 
 
@@ -65,24 +63,8 @@ suspend fun main(args: Array<String>) {
             }
         }
 
-        // initialize all uninitialized guilds
-//            api.guilds.toList().filter { configuration[it.id.longValue] == null }.forEach {
-//
-//                configuration[it.id.longValue] = GuildConfiguration("-")
-//                configuration.save()
-//            }
-
         presence {
-            listening("SUGGESTIONS")
-        }
-
-        permissions {
-            val guild = guild ?: return@permissions false
-            val member = user.asMember(guild.id)
-            val permission = command.requiredPermissionLevel
-
-            val permissionsService = discord.getInjectionObjects(PermissionsService::class)
-            permissionsService.hasClearance(member, permission)
+            playing("Corn likes: CornBot")
         }
     }
 }
