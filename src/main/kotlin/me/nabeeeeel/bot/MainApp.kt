@@ -1,6 +1,7 @@
 package me.nabeeeeel.bot
 
 import com.gitlab.kordlib.common.entity.Snowflake
+import com.gitlab.kordlib.kordx.emoji.Emojis
 import me.jakejmattson.discordkt.api.dsl.bot
 import me.jakejmattson.discordkt.api.extensions.profileLink
 import java.awt.Color
@@ -17,6 +18,7 @@ suspend fun main(args: Array<String>) {
         configure {
             theme = Color(255, 205, 22)
             allowMentionPrefix = true
+            commandReaction = Emojis.corn
         }
 
         mentionEmbed {
@@ -38,7 +40,7 @@ suspend fun main(args: Array<String>) {
             }
 
             footer {
-                text = "Version 0.0.1a - ${versions.library} - ${versions.kord}"
+                text = "Version 1.0.0 - ${versions.library} - ${versions.kord}"
             }
 
             field {

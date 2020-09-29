@@ -16,7 +16,7 @@ fun CornCommands(listService: ListService) = commands("Corn") {
                 newString += it.toUpperCase() + " "
             }
             respond {
-                title = "C O R N  S A Y S : $newString"
+                title = "C O R N  S A Y S  :  $newString"
                 color = discord.configuration.theme
                 image = listService.cornImages.random()
             }
@@ -32,7 +32,7 @@ fun CornCommands(listService: ListService) = commands("Corn") {
                 newString += it.toUpperCase() + " "
             }
             respond {
-                title = "C O R N  L I K E S : $newString"
+                title = "C O R N  L I K E S  :  $newString"
                 color = discord.configuration.theme
                 image = listService.cornImages.random()
             }
